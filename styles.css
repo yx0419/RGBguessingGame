@@ -1,0 +1,31 @@
+body {
+    background-color: white;
+}
+
+#colors-container {
+    width: 30%;
+    margin: 0 auto; 
+    /* margin: 0 auto is to center this color-container  */
+}
+
+.square {
+    background-color: aqua;
+    width: 30%;
+    padding-bottom: 30%;
+
+    margin: 1.66%;
+    float: left;
+}
+
+#header {
+    text-align: center;
+}
+
+p {
+    color: blue;
+    font-size: 40px;
+}
+
+#parag {
+    font-size: 20px;
+}
