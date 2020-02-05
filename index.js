@@ -7,6 +7,7 @@
 //     "rgb(255, 0, 255)"
 // ]
 
+var numbOfSquares = 6; //keeps track of what mode we are on. or the number of squares.
 var message = document.getElementById("mymessage");
 var squares = document.querySelectorAll(".square");
 var rgbtext = document.getElementById("rgb");
@@ -15,8 +16,8 @@ var hardBtn = document.querySelector(".hard");
 
 
 //generate six colors and pick a correct one.
-var colors = generateColorsArray(6); //argument is how many colors to generate 
-var correctColor = randomlyPickOneCorrectColor(6);
+var colors = generateColorsArray(numbOfSquares); //argument is how many colors to generate 
+var correctColor = randomlyPickOneCorrectColor(numbOfSquares);
 
 
 //display generated colors to all the squares on the screen.
@@ -74,23 +75,25 @@ function makeRGBstring() { //pick each color from 0 - 255 both inclusive
 
 easyBtn.addEventListener('click', function () {
 
+    numbOfSquares = 3;
+
     easyBtn.classList.add("activeone")
     hardBtn.classList.remove('activeone');
 
-    colors = generateColorsArray(3);
-    correctColor = randomlyPickOneCorrectColor(3);
+    colors = generateColorsArray(numbOfSquares);
+    correctColor = randomlyPickOneCorrectColor(numbOfSquares);
     rgbtext.textContent = correctColor;
 
     //give three new colors
-    for (var i = 0; i < colors.length; i++) {
+    for (var i = 0; i < numbOfSquares; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
 
+    //hide bottom three squares on the screen.
     for (var i = colors.length; i < squares.length; i++) {
-        squares[i].style.backgroundColor = 'white';
+        squares[i].style.display = "none";
     }
 
-    //hide bottom three squares
     message.textContent = "Which color does this RGB represents?";
     rgbtext.style.backgroundColor = "#1f2a44";
 
@@ -98,15 +101,23 @@ easyBtn.addEventListener('click', function () {
 
 hardBtn.addEventListener('click', function () {
 
+    numbOfSquares = 6;
+
     hardBtn.classList.add('activeone');
     easyBtn.classList.remove('activeone');
-    colors = generateColorsArray(6);
-    correctColor = randomlyPickOneCorrectColor(6);
+    colors = generateColorsArray(numbOfSquares);
+    correctColor = randomlyPickOneCorrectColor(numbOfSquares);
     rgbtext.textContent = correctColor;
 
-    for (var i = 0; i < squares.length; i++) {
+    for (var i = 0; i < colors.length; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
+
+    //display bottom three squares on the screen again.
+    for (var i = 3; i < numbOfSquares; i++) {
+        squares[i].style.display = "block";
+    }
+
     message.textContent = "Which color does this RGB represents?";
     rgbtext.style.backgroundColor = "#1f2a44";
 })

@@ -5,6 +5,7 @@ body {
 #colors-container {
     width: 30%;
     margin: 0 auto; 
+    margin-top: 10px;
     /* margin: 0 auto is to center this color-container  */
 }
 
@@ -17,7 +18,7 @@ body {
     float: left;
 }
 
-#header {
+.header {
     width: 60%;
     height:30%;
     margin: 0 auto; 
@@ -27,11 +28,11 @@ body {
 }
 
 #rgb {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #mymessage {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 h1, #mymessage, #headline, #rgb {
@@ -39,10 +40,10 @@ h1, #mymessage, #headline, #rgb {
 }
 
 #headline{
-    font-size: 35px;
+    font-size: 26px;
 }
 
-#line {
+.line {
     width: 60%;
     margin: 0 auto;
     text-align: center;
