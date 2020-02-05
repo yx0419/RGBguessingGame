@@ -18,14 +18,46 @@ body {
 }
 
 #header {
+    width: 60%;
+    height:30%;
+    margin: 0 auto; 
     text-align: center;
+    background-color: #1f2a44;
+    padding-bottom: 1px;
 }
 
-p {
-    color: blue;
+#rgb {
     font-size: 40px;
 }
 
-#parag {
-    font-size: 20px;
+#mymessage {
+    font-size: 25px;
 }
+
+h1, #mymessage, #headline, #rgb {
+    color: white;
+}
+
+#headline{
+    font-size: 35px;
+}
+
+#line {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(221, 234, 250);
+    height: 42px;
+    padding-top: 5px;
+}
+
+p {
+    margin: 1px;
+}
+
+.activeone{
+    background-color:  rgb(175, 204, 241);
+    font-weight: bold;
+}
+
+
