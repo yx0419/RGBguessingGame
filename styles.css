@@ -61,4 +61,12 @@ p {
     font-weight: bold;
 }
 
+button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover{
+    background:rgb(175, 204, 241);
+}
 
