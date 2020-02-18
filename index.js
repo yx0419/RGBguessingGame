@@ -39,9 +39,7 @@ var correctColor = randomlyPickOneCorrectColor(numbOfSquares);
 
 //display generated colors to all the squares on the screen.
 for (var i = 0; i < squares.length; i++) {
-
     squares[i].style.backgroundColor = colors[i];
-
     squares[i].addEventListener('click', function () {
 
         if (this.style.backgroundColor === correctColor) {
